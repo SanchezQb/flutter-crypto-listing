@@ -1,6 +1,6 @@
 # Flutter Crypto Listing App
 
-## A simple app for showing crypocurrencies and their prices using the Nomics API.
+## A simple app for showing crypocurrencies and their prices using the [**Nomics API**](https://nomics.com/docs).
 <br>
 
 ## 📸 ScreenShots
@@ -8,6 +8,7 @@
 | List of Currencies | Currency Details |
 |------|-------|
 |<img src="screenshots/currencies.png" width="300">|<img src="screenshots/details.png" width="300">|
+
 
 
 ## 🔌 Plugins
@@ -21,6 +22,3 @@
 ## 🤓 Author(s)
 **Chisom Ekwuribe** [![Twitter Follow](https://img.shields.io/twitter/follow/root_sanchez.svg?style=social)](https://twitter.com/root_sanchez)
 
-<!-- 
-## 🔖 LICENCE
-[Apache-2.0](https://github.com/JideGuru/FlutterEbookApp/blob/master/LICENSE) -->
