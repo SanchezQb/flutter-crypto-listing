@@ -13,7 +13,7 @@ class Routes {
         );
 
       case '/currency_details':
-        final Currency currency = settings.arguments;
+        final Currency? currency = settings.arguments as Currency?;
         return MaterialPageRoute<bool>(
           builder: (BuildContext context) => CurrencyDetailsPage(currency),
         );

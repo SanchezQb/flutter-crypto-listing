@@ -15,12 +15,12 @@ class CurrencyLoadingState extends CurrencyState {
 }
 
 class CurrencyLoadedState extends CurrencyState {
-  final List<Currency> currencies;
+  final List<Currency>? currencies;
 
   const CurrencyLoadedState({this.currencies});
 
   CurrencyLoadedState copy({
-    List<Currency> currencies,
+    List<Currency>? currencies,
   }) =>
       CurrencyLoadedState(
         currencies: currencies ?? this.currencies,
@@ -39,7 +39,7 @@ class CurrencyLoadedState extends CurrencyState {
 }
 
 class CurrencyErrorState extends CurrencyState {
-  final String message;
+  final String? message;
 
   const CurrencyErrorState(this.message);
 

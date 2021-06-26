@@ -1,31 +1,31 @@
 class Currency {
-  String id;
-  String currency;
-  String symbol;
-  String name;
-  String logoUrl;
-  String status;
-  String price;
-  String priceDate;
-  String priceTimestamp;
-  String circulatingSupply;
-  String maxSupply;
-  String marketCap;
-  String marketCapDominance;
-  String numExchanges;
-  String numPairs;
-  String numPairsUnmapped;
-  String firstCandle;
-  String firstTrade;
-  String firstOrderBook;
-  String rank;
-  String high;
-  String highTimestamp;
-  Hour hour;
-  Hour day;
-  Hour week;
-  Hour month;
-  Hour year;
+  String? id;
+  String? currency;
+  String? symbol;
+  String? name;
+  String? logoUrl;
+  String? status;
+  String? price;
+  String? priceDate;
+  String? priceTimestamp;
+  String? circulatingSupply;
+  String? maxSupply;
+  String? marketCap;
+  String? marketCapDominance;
+  String? numExchanges;
+  String? numPairs;
+  String? numPairsUnmapped;
+  String? firstCandle;
+  String? firstTrade;
+  String? firstOrderBook;
+  String? rank;
+  String? high;
+  String? highTimestamp;
+  Hour? hour;
+  Hour? day;
+  Hour? week;
+  Hour? month;
+  Hour? year;
 
   Currency({
     this.id,
@@ -112,32 +112,32 @@ class Currency {
     data['high'] = this.high;
     data['high_timestamp'] = this.highTimestamp;
     if (this.hour != null) {
-      data['hour'] = this.hour.toJson();
+      data['hour'] = this.hour!.toJson();
     }
     if (this.day != null) {
-      data['day'] = this.day.toJson();
+      data['day'] = this.day!.toJson();
     }
     if (this.week != null) {
-      data['week'] = this.week.toJson();
+      data['week'] = this.week!.toJson();
     }
     if (this.month != null) {
-      data['month'] = this.month.toJson();
+      data['month'] = this.month!.toJson();
     }
     if (this.year != null) {
-      data['year'] = this.year.toJson();
+      data['year'] = this.year!.toJson();
     }
     return data;
   }
 }
 
 class Hour {
-  String volume;
-  String priceChange;
-  String priceChangePct;
-  String volumeChange;
-  String volumeChangePct;
-  String marketCapChange;
-  String marketCapChangePct;
+  String? volume;
+  String? priceChange;
+  String? priceChangePct;
+  String? volumeChange;
+  String? volumeChangePct;
+  String? marketCapChange;
+  String? marketCapChangePct;
 
   Hour({
     this.volume,

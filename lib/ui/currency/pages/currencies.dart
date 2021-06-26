@@ -15,8 +15,8 @@ class _CurrenciesPageState extends State<CurrenciesPage> {
   void initState() {
     super.initState();
 
-    Future.delayed(Duration.zero)
-        .then((_) => context.read(currencyStateNotifier).getCurrencies());
+    Future.delayed(Duration.zero).then(
+        (_) => context.read(currencyStateNotifier.notifier).getCurrencies());
   }
 
   @override
@@ -27,7 +27,7 @@ class _CurrenciesPageState extends State<CurrenciesPage> {
         elevation: 0,
         title: Text(
           "Markets",
-          style: Theme.of(context).textTheme.headline6.copyWith(
+          style: Theme.of(context).textTheme.headline6!.copyWith(
                 fontWeight: FontWeight.bold,
               ),
         ),
@@ -44,7 +44,7 @@ class _CurrenciesPageState extends State<CurrenciesPage> {
         children: [
           Consumer(
             builder: (context, watch, child) {
-              final state = watch(currencyStateNotifier.state);
+              final state = watch(currencyStateNotifier);
               if (state is CurrencyLoadingState) {
                 return Center(
                   child: const CircularProgressIndicator(),
@@ -52,42 +52,19 @@ class _CurrenciesPageState extends State<CurrenciesPage> {
               }
               if (state is CurrencyErrorState) {
                 return Center(
-                  child: Text(state.message),
+                  child: Text(state.message!),
                 );
               }
               if (state is CurrencyLoadedState) {
                 return Padding(
-                  padding: const EdgeInsets.symmetric(
-                    vertical: 10.0,
-                    horizontal: 20.0,
-                  ),
+                  padding: const EdgeInsets.all(10.0),
                   child: Column(
                     children: [
-                      // TextField(
-                      //   onChanged: (value) {
-                      //     context.read(currencyStateNotifier).search(value);
-                      //   },
-                      //   decoration: InputDecoration(
-                      //     contentPadding: const EdgeInsets.all(10.0),
-                      //     border: OutlineInputBorder(
-                      //       borderRadius: BorderRadius.circular(25.0),
-                      //       borderSide: BorderSide(
-                      //         width: 0,
-                      //         style: BorderStyle.none,
-                      //       ),
-                      //     ),
-                      //     hintText: 'Search',
-                      //     filled: true,
-                      //     prefixIcon: const Icon(
-                      //       Icons.search,
-                      //     ),
-                      //   ),
-                      // ),
                       Expanded(
                         child: ListView.builder(
-                          itemCount: state.currencies.length,
+                          itemCount: state.currencies!.length,
                           itemBuilder: (context, index) {
-                            final Currency currency = state.currencies[index];
+                            final Currency currency = state.currencies![index];
                             return CurrencyListTile(
                               currency: currency,
                             );

@@ -11,7 +11,6 @@ class AppTheme {
     visualDensity: visualDensity,
     cardColor: Colors.grey[900],
     buttonColor: Colors.grey[900],
-    useTextSelectionTheme: true,
     buttonTheme: ButtonThemeData(
       colorScheme: ColorScheme.dark(),
       buttonColor: Colors.grey[900],
@@ -32,7 +31,6 @@ class AppTheme {
     visualDensity: visualDensity,
     cardColor: Color(0xfff3f4f6),
     buttonColor: Colors.white,
-    useTextSelectionTheme: true,
     buttonTheme: ButtonThemeData(
       colorScheme: ColorScheme.light(),
       buttonColor: Colors.white,

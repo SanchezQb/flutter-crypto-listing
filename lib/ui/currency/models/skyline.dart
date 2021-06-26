@@ -1,7 +1,7 @@
 class Skyline {
-  String currency;
-  List<String> timestamps;
-  List<String> prices;
+  String? currency;
+  List<String>? timestamps;
+  List<String>? prices;
 
   Skyline({this.currency, this.timestamps, this.prices});
 

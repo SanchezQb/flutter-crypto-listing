@@ -15,7 +15,7 @@ class CurrencyStateNotifier extends StateNotifier<CurrencyState> {
           await read(apiServiceProvider).getCurrencies();
       state = CurrencyLoadedState(currencies: currencies);
     } on DioError catch (e) {
-      final error = e.response.data;
+      final error = e.response!.data;
       state = CurrencyErrorState(error['message']);
     }
   }
@@ -23,8 +23,8 @@ class CurrencyStateNotifier extends StateNotifier<CurrencyState> {
   void search(String query) {
     if (state is CurrencyLoadedState) {
       final newState = state as CurrencyLoadedState;
-      final filteredCurrencies = newState.currencies
-          .where((currency) => currency.name.contains(query))
+      final filteredCurrencies = newState.currencies!
+          .where((currency) => currency.name!.contains(query))
           .toList();
       state = newState.copy(currencies: filteredCurrencies);
     }
