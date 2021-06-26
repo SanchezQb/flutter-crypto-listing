@@ -7,7 +7,7 @@
 
 | List of Currencies | Currency Details |
 |------|-------|
-|<img src="screenshots/currencies.png" width="200">|<img src="screenshots/details.png" width="200">|
+|<img src="screenshots/currencies.png" width="300">|<img src="screenshots/details.png" width="300">|
 
 
 ## 🔌 Plugins
